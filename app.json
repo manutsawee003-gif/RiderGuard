@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "RiderGuard",
+    "slug": "riderguard",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0E1116",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.example.riderguard",
+      "infoPlist": {
+        "NSMotionUsageDescription": "RiderGuard uses motion sensors to detect crashes while you ride.",
+        "NSLocationWhenInUseUsageDescription": "RiderGuard uses your location to measure speed and share where you are if a crash is detected."
+      }
+    },
+    "android": {
+      "package": "com.example.riderguard",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "VIBRATE",
+        "HIGH_SAMPLING_RATE_SENSORS"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "RiderGuard uses your location to measure speed and share where you are if a crash is detected."
+        }
+      ],
+      [
+        "expo-sensors",
+        {
+          "motionPermission": "RiderGuard uses motion sensors to detect crashes while you ride."
+        }
+      ]
+    ]
+  }
+}
